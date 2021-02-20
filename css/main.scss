@@ -72,6 +72,7 @@ body {
         margin-top: 1.5em;
         margin: 0 1em 0 1em;
         box-shadow: 4px 4px 14px #000;
+        border: 5px solid white;
     }
 
     .right-column {
@@ -87,6 +88,7 @@ body {
         .hero-cta {
             margin-bottom: 1em;
             margin-top: 1em;
+
             .cta-link {
                 text-align: center;
                 color: rgb(245, 245, 245);
@@ -102,12 +104,12 @@ body {
             }
 
             .cta-text {
-                text-align: center;
+                text-align: justify;
                 color: rgb(245, 245, 245);
                 text-decoration: none;
                 display: grid;
                 font-size: 1em;
-                margin-top: .5em;
+                margin: .5em .5em;
             }
 
         }
@@ -138,19 +140,27 @@ body {
     display: block;
 }
 
-.about-me .container {
-    margin-bottom: 2em;
-    margin-top: 2em;
+.profile-image-container {
+
+    background-color: var(--primary-colour);
+    margin: 1em 0em;
+    padding: 1em;
 
     .profile-image {
         border-radius: 20em;
-        height: 30%;
-        width: 30%;
+        height: 20%;
+        width: 20%;
         display: block;
+        padding: 4em auto;
         margin-left: auto;
         margin-right: auto;
-        border: 5px solid var(--primary-colour);
+        border: 5px solid white;
     }
+}
+
+.about-me .container {
+    margin-bottom: 2em;
+    margin-top: 2em;
 
     .right-column {
         .about-me-text {
@@ -161,6 +171,9 @@ body {
             text-align: justify;
             text-justify: inter-word;
             padding: 0 2em;
+            line-height: 1.6em;
+            font-size: 0.8em;
+
         }
 
         .about-me-cta {
@@ -290,6 +303,40 @@ nav {
         width: 540px;
         height: 285px;
     }
+
+    
+    .about-me .container {
+        margin: 2em 2em; //
+        padding: 0 2em; //
+    
+        .profile-image {
+            border-radius: 20em;
+            height: 20%; //
+            width: 20%; //
+        }
+    
+        .right-column {
+            margin: 2em 2em; //
+            padding: 0 2em; //
+
+            .about-me-text {
+                //margin: 2em 4em; //
+                padding: 0 2em; //
+            }
+    
+            .about-me-paragraph {
+                padding: 1em 0em; //
+                font-size: 1em;
+            }
+    
+            .about-me-cta {
+                
+                a {
+                    font-size: 1.2em; //
+                }
+            }
+        }
+    }
 }
 
 // change to desktop view
@@ -335,13 +382,13 @@ nav {
                 }
     
                 .cta-text {
-                    text-align: center;
+                    text-align: justify;
                     color: rgb(245, 245, 245);
                     text-decoration: none;
                     display: flex;
                     position: unset;
                     font-size: 1.2em;
-                    margin: .5em .5em ;
+                    margin: .5em .8em ;
                 }
     
             }
@@ -363,12 +410,13 @@ nav {
             padding: 0 2em; //
 
             .about-me-text {
-                margin: 2em 4em; //
+                //margin: 2em 4em; //
                 padding: 0 2em; //
             }
     
             .about-me-paragraph {
-                padding: 1em 2em; //
+                padding: 1em 0em; //
+                font-size: 1em;
             }
     
             .about-me-cta {

@@ -75,6 +75,7 @@ body {
   margin: 0 1em 0 1em;
   -webkit-box-shadow: 4px 4px 14px #000;
           box-shadow: 4px 4px 14px #000;
+  border: 5px solid white;
 }
 
 .hero .container .right-column {
@@ -109,13 +110,13 @@ body {
 }
 
 .hero .container .right-column .hero-cta .cta-text {
-  text-align: center;
+  text-align: justify;
   color: whitesmoke;
   text-decoration: none;
   display: -ms-grid;
   display: grid;
   font-size: 1em;
-  margin-top: .5em;
+  margin: .5em .5em;
 }
 
 .video-container {
@@ -144,19 +145,26 @@ body {
   display: block;
 }
 
+.profile-image-container {
+  background-color: var(--primary-colour);
+  margin: 1em 0em;
+  padding: 1em;
+}
+
+.profile-image-container .profile-image {
+  border-radius: 20em;
+  height: 20%;
+  width: 20%;
+  display: block;
+  padding: 4em auto;
+  margin-left: auto;
+  margin-right: auto;
+  border: 5px solid white;
+}
+
 .about-me .container {
   margin-bottom: 2em;
   margin-top: 2em;
-}
-
-.about-me .container .profile-image {
-  border-radius: 20em;
-  height: 30%;
-  width: 30%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  border: 5px solid var(--primary-colour);
 }
 
 .about-me .container .right-column .about-me-text {
@@ -167,6 +175,8 @@ body {
   text-align: justify;
   text-justify: inter-word;
   padding: 0 2em;
+  line-height: 1.6em;
+  font-size: 0.8em;
 }
 
 .about-me .container .right-column .about-me-cta {
@@ -288,6 +298,29 @@ nav li a:hover {
     width: 540px;
     height: 285px;
   }
+  .about-me .container {
+    margin: 2em 2em;
+    padding: 0 2em;
+  }
+  .about-me .container .profile-image {
+    border-radius: 20em;
+    height: 20%;
+    width: 20%;
+  }
+  .about-me .container .right-column {
+    margin: 2em 2em;
+    padding: 0 2em;
+  }
+  .about-me .container .right-column .about-me-text {
+    padding: 0 2em;
+  }
+  .about-me .container .right-column .about-me-paragraph {
+    padding: 1em 0em;
+    font-size: 1em;
+  }
+  .about-me .container .right-column .about-me-cta a {
+    font-size: 1.2em;
+  }
 }
 
 @media only screen and (min-width: 1080px) {
@@ -331,7 +364,7 @@ nav li a:hover {
     color: black;
   }
   .hero .container .right-column .hero-cta .cta-text {
-    text-align: center;
+    text-align: justify;
     color: whitesmoke;
     text-decoration: none;
     display: -webkit-box;
@@ -339,7 +372,7 @@ nav li a:hover {
     display: flex;
     position: unset;
     font-size: 1.2em;
-    margin: .5em .5em;
+    margin: .5em .8em;
   }
   .about-me .container {
     margin: 2em 4em;
@@ -355,11 +388,11 @@ nav li a:hover {
     padding: 0 2em;
   }
   .about-me .container .right-column .about-me-text {
-    margin: 2em 4em;
     padding: 0 2em;
   }
   .about-me .container .right-column .about-me-paragraph {
-    padding: 1em 2em;
+    padding: 1em 0em;
+    font-size: 1em;
   }
   .about-me .container .right-column .about-me-cta a {
     font-size: 1.2em;
