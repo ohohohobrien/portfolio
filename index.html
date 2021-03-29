@@ -19,7 +19,7 @@
 
                 <div class="right-menu">
                     <ul class='primary-nav'>
-                        <li><a href="#">top of page</a></li>
+                        <li><a href="#top-of-page">top of page</a></li>
                         <li><a id="about-btn" href="#about-me" class="nav-link">about me</a></li>
                         <li><a id="dice-btn" href="#dice-hero" class="nav-link">dice app</a></li>
                         <li><a id="orb-btn" href="#orb-hero" class="nav-link">orb game</a></li>
@@ -29,6 +29,8 @@
             </nav>
         </div>
     </div>
+
+    <div id='top-of-page'></div>
 
     <div class="profile-image-container">
         <img src="images/Sean.png" alt="Illustration image" class="profile-image">
@@ -59,8 +61,8 @@
                 <div class="about-me-cta">
                     <h1 class="about-me-text">contact me</h1>
                     <p></p>
-                    <a href="https://www.linkedin.com/in/seanobrien4/" class="cta-link">LinkedIn</a>
-                    <a href="downloads/Resume - Sean O'Brien.pdf" class="cta-link" download>resume</a>
+                    <a href="https://www.linkedin.com/in/seanobrien4/" target="_blank" class="cta-link">LinkedIn</a>
+                    <a href="downloads/Resume - Sean O'Brien.pdf" target="_blank" class="cta-link" download>resume</a>
                 </div>
             </div>
         </div>
@@ -74,13 +76,13 @@
                 <h1 class="hero-text">roll dice with the swing of your phone</h1>
                 
                 <div class="hero-cta">
-                    <a href="https://play.google.com/store/apps/details?id=com.Ohohohobrien.Nat20VirtualDice" class="cta-link">download</a>
+                    <a href="https://play.google.com/store/apps/details?id=com.Ohohohobrien.Nat20VirtualDice" target="_blank" class="cta-link">download</a>
                     <p></p>
-                    <p id="dice-video-btn" class="cta-link">watch it in action</p>
+                    <p id="dice-video-btn" class="cta-link" data-show="False" data-container="dice-video" data-toggle="video-show">watch it in action</p>
                     <div id="dice-video" class="video-container">
                         <iframe class="video-player" width=auto height=auto src="https://www.youtube.com/embed/Ns6IfVvHfwI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
-                    <p id="dice-read-btn" class="cta-link">read more</p>
+                    <p id="dice-read-btn" class="cta-link" data-show="False" data-container="dice-read-text" data-toggle="read-show">read more</p>
                     <div id='dice-read-text' class="read-more-container">
                         <p class="cta-text">
                             This application was designed in C# using the Unity Engine. It accesses your smartphones accelerometer and determines if enough force has been used to simulate throwing a set of dice. Once thrown, the dice logic will enable collision boxes on each face to detect if it has collided with the floor. If a collision is detected, this will send the value on the opposing face (the rolled value) to the games logic to total and record. Once the total number of values received matches the total number of dice spawned the application will display the total.
@@ -105,13 +107,13 @@
                 <h1 class="hero-text">challenge yourself in a swiping frenzy</h1>
                 
                 <div class="hero-cta">
-                    <a href="https://play.google.com/store/apps/details?id=com.Ohohohobrien.OrbOrb" class="cta-link">download</a>
+                    <a href="https://play.google.com/store/apps/details?id=com.Ohohohobrien.OrbOrb" target="_blank" class="cta-link">download</a>
                     <p></p>
-                    <p id="orb-video-btn" class="cta-link">watch it in action</p>
+                    <p id="orb-video-btn" class="cta-link" data-show="False" data-container="orb-video" data-toggle="video-show">watch it in action</p>
                     <div id="orb-video" class="video-container">
                         <iframe class="video-player" width=auto height=auto src="https://www.youtube.com/embed/l6oJXulEWqM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
-                    <p id="orb-read-btn" class="cta-link">read more</p>
+                    <p id="orb-read-btn" class="cta-link" data-show="False" data-container="orb-read-text" data-toggle="read-show">read more</p>
                     <div id='orb-read-text' class="read-more-container">
                         <p class="cta-text">
                             This application was designed in C# using the Unity Engine. It utilises your smartphones touch screen to accept user input to move "Orbs" around the screen. The game will spawn Orbs that will randomise which colour they spawn as to create a new experience each play. There is a lot of logic to correctly handle collisions such as the absorption effect that utilises vector and velocity calculations. 
@@ -132,7 +134,7 @@
                 <h1 class="hero-text">beautiful sites designed to your needs</h1>
                 
                 <div class="hero-cta">
-                    <p id="web-read-btn" class="cta-link">view samples</p>
+                    <p id="web-read-btn" class="cta-link" data-show="False" data-container="web-read-text" data-toggle="read-show">view samples</p>
                     <div id='web-read-text' class="read-more-container">
                         <p class="cta-text">
                             This site has been prepared from scratch using HTML, CSS and Javascript. I intend on developing different websites to add more samples in the near future.
@@ -145,38 +147,36 @@
 
     <script>
 
-        // showing videos
-
-        diceVideoBtn = document.getElementById('dice-video-btn');
-
-        diceVideoBtn.addEventListener('click', () => {
-            document.getElementById('dice-video').classList.toggle('video-show');
-        })
-
-        orbVideoBtn = document.getElementById('orb-video-btn');
-
-        orbVideoBtn.addEventListener('click', () => {
-            document.getElementById('orb-video').classList.toggle('video-show');
-        })
-
-        // showing read more
-
-        diceReadMore = document.getElementById('dice-read-btn');
-
-        diceReadMore.addEventListener('click', () => {
-            document.getElementById('dice-read-text').classList.toggle('read-show');
-        })
-
-        orbReadMore = document.getElementById('orb-read-btn');
-
-        orbReadMore.addEventListener('click', () => {
-            document.getElementById('orb-read-text').classList.toggle('read-show');
-        })
-
-        webReadMore = document.getElementById('web-read-btn');
-
-        webReadMore.addEventListener('click', () => {
-            document.getElementById('web-read-text').classList.toggle('read-show');
+        // Apply the button press to each CTA link
+        element_dict = {};
+        document.querySelectorAll(".cta-link").forEach(link => {
+            if (link.dataset.container != undefined) {
+                link.addEventListener('click', () => {
+                    let dict_name = link.dataset.container;
+                    element_dict[dict_name] = document.getElementById(`${link.dataset.container}`);
+                    if (link.dataset.show == 'True') {
+                        // Remove the window
+                        console.log('Close window.');
+                        element_dict[dict_name].style.animationName = 'scale-down-ver-center';
+                        element_dict[dict_name].onanimationend = () => {
+                            console.log('Animation ended');
+                            element_dict[dict_name].classList.toggle(link.dataset.toggle);
+                            console.log(element_dict[dict_name]);
+                        };
+                        link.dataset.show = "False";
+                    } else {
+                        // Show the window
+                        console.log('Show window.');
+                        element_dict[dict_name].style.animationName = 'scale-up-ver-center';
+                        element_dict[dict_name].classList.toggle(link.dataset.toggle);
+                        element_dict[dict_name].scrollIntoView({ behavior: 'smooth', block: 'center'});
+                        element_dict[dict_name].onanimationend = () => {
+                            link.dataset.show = "True";
+                        };
+                        console.log(element_dict[dict_name]);
+                    }
+                })
+            }
         })
 
         // nav bar navigation script
@@ -217,6 +217,16 @@
         logoBtn.addEventListener('click', () => {
             nav.classList.remove('menu-btn');
         })
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
 
     </script>
 

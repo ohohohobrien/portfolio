@@ -103,6 +103,20 @@ body {
                 }
             }
 
+            .cta-link-test {
+                text-align: center;
+                color: rgb(245, 245, 245);
+                text-decoration: none;
+                display: grid;
+                font-size: 1em;
+                margin-top: .5em;
+                cursor: pointer;
+
+                &:hover {
+                    color: black;
+                }
+            }
+
             .cta-text {
                 text-align: justify;
                 color: rgb(245, 245, 245);
@@ -116,6 +130,55 @@ body {
     }
 }
 
+
+
+@keyframes scale-up-ver-center {
+    0% {
+        transform: scaleY(0);
+        box-shadow: 0px 0px 0px #000;
+        border-radius: 0px;
+        opacity: 0;
+    }
+
+    60% {
+        transform: scaleY(1.1);
+        opacity: .5;
+    }
+
+    100% {
+        transform: scaleY(1);
+        box-shadow: 4px 4px 14px #000;
+        border-radius: 2em;
+        opacity: 1;
+    }
+}
+
+@keyframes scale-down-ver-center {
+    0% {
+        line-height: 100%;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        margin-top: 1em;
+        opacity: .8;
+        color: rgb(255, 255, 255);
+        }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        //transform: scaleY(0);
+        height: 0px;
+        line-height: 0px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+        color: transparent;
+        opacity: 0;
+        }
+}
+
 .video-container {
     display: none;
     margin-top: 1em;
@@ -126,6 +189,11 @@ body {
 
 .video-show {
     display: block;
+    border-radius: 2em;
+    animation-name: scale-up-ver-center;
+    animation-duration: .6s;
+    animation-play-state: default;
+    animation-direction: alternate;
 }
 
 .read-more-container {
@@ -134,6 +202,11 @@ body {
     padding-top: 1em;
     padding-bottom: 1em;
     box-shadow: 4px 4px 14px #000;
+    border-radius: 2em;
+    animation-name: scale-up-ver-center;
+    animation-duration: .6s;
+    animation-play-state: default;
+    animation-direction: forwards;
 }
 
 .read-show {
@@ -368,6 +441,20 @@ nav {
                 margin-top: 3em;
 
                 .cta-link {
+                    text-align: center;
+                    color: rgb(245, 245, 245);
+                    text-decoration: none;
+                    display: grid;
+                    font-size: 1.5em;
+                    margin-top: 1em;
+                    cursor: pointer;
+    
+                    &:hover {
+                        color: black;
+                    }
+                }
+
+                .cta-link-test {
                     text-align: center;
                     color: rgb(245, 245, 245);
                     text-decoration: none;
