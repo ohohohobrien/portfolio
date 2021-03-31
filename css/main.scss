@@ -207,6 +207,8 @@ body {
 .read-more-container {
     display: none;
     margin-top: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
     padding-top: 1em;
     padding-bottom: 1em;
     box-shadow: 4px 4px 14px #000;
@@ -283,7 +285,7 @@ body {
     );
     margin: 1em 0em;
     padding: 3em;
-    height: 700px;
+    height: 750px;
     animation-name: profile-reveal-load-gradient;
     animation-duration: 1.5s;
     animation-direction: forwards;
@@ -308,7 +310,8 @@ body {
 
     .container {
 
-        padding-top: 2em;
+        padding-top: 1em;
+        padding-bottom: 1em;
         animation-name: profile-reveal-from-below;
         animation-duration: 1.5s;
         animation-direction: forwards;
@@ -320,11 +323,17 @@ body {
             font-size: 2.5em;
             font-weight: bold;
             letter-spacing: 5px;
-            line-height: 3;
+            line-height: 2;
             font-family: 'Varela Round';
         }
 
     }
+}
+
+hr {
+    border: 1px solid rgba(185, 185, 185, 0.541);
+    border-radius: 5px;
+    margin-bottom: 5px;
 }
 
 .about-me .container {
@@ -341,7 +350,7 @@ body {
         // opacity: 0.6;
         position: absolute;
         left: 0;
-        top: 0;
+        bottom: 0;
         width: auto;
         height: auto;
         -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0)), to(rgba(0,0,0,1)));
@@ -363,10 +372,13 @@ body {
         .about-me-paragraph {
             text-align: justify;
             text-justify: inter-word;
-            padding: 0 2em;
+            padding: 1em 2em;
             line-height: 1.6em;
             font-size: 1em;
-
+            font-weight: 400;
+            background-color: rgba(111, 178, 240, 0.76);
+            border-radius: 1em;
+            color: honeydew;
         }
 
         .about-me-cta {
@@ -534,7 +546,7 @@ nav {
             }
     
             .about-me-paragraph {
-                padding: 1em 0em; //
+                padding: 1em 1em; //
                 font-size: 1em;
             }
     
@@ -544,6 +556,44 @@ nav {
                     font-size: 1.2em; //
                 }
             }
+        }
+    }
+
+    .profile-image-container {
+
+        background-color: var(--primary-colour);
+        background: repeating-linear-gradient(
+        45deg,
+        var(--primary-colour),
+        var(--primary-colour),
+        #1481da 10px,
+        #1e8ccc 10px,
+        );
+        margin: 1em 0em;
+        padding: 3em;
+        height: 750px;
+        animation-name: profile-reveal-load-gradient;
+        animation-duration: 1.5s;
+        animation-direction: forwards;
+    
+        .profile-image {
+            margin-top: 2em;
+        }
+    
+        .container {
+            margin-top: 0;
+    
+            .profile-words {
+    
+                color: rgb(245, 245, 245);
+                text-align: center;
+                font-size: 3em;
+                font-weight: 600;
+                letter-spacing: 5px;
+                line-height: 2;
+                font-family: 'Varela Round';
+            }
+    
         }
     }
 }
@@ -638,7 +688,7 @@ nav {
             }
     
             .about-me-paragraph {
-                padding: 1em 0em; //
+                padding: 2em 2em; //
                 font-size: 1em;
             }
     
