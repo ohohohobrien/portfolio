@@ -234,10 +234,34 @@ body {
 .about-me .container {
     margin-bottom: 2em;
     margin-top: 2em;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
+    overflow: hidden;
+    position: relative;
+
+    .background-image {
+        // opacity: 0.6;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: auto;
+        height: auto;
+        -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0)), to(rgba(0,0,0,1)));
+        mask-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
+    }
 
     .right-column {
+        position: relative;
+        
         .about-me-text {
             text-align: center;
+        }
+
+        .about-me-text-white {
+            text-align: center;
+            color: white;
         }
 
         .about-me-paragraph {
@@ -254,7 +278,8 @@ body {
             display: grid;
             
             a {
-                color: var(--primary-colour);
+                color:  rgb(25, 133, 235);
+                text-shadow: rgb(100, 198, 236) 0px 0px 1px;
                 text-decoration: none;
                 padding-bottom: 1em;
             }
@@ -307,6 +332,20 @@ nav {
         transform: scale(1.2);
     }
 }
+
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.reveal.active {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+
 
 // still mobile-esque but no hamburger menu
 @media only screen and (min-width: 768px) {
@@ -379,8 +418,8 @@ nav {
 
     
     .about-me .container {
-        margin: 2em 2em; //
-        padding: 0 2em; //
+        margin: 2em 0em; //
+        padding: 0 0em; //
     
         .profile-image {
             border-radius: 20em;
@@ -483,8 +522,8 @@ nav {
     }
 
     .about-me .container {
-        margin: 2em 4em; //
-        padding: 0 2em; //
+        margin: 2em 0em; //
+        padding: 0 0em; //
     
         .profile-image {
             border-radius: 20em;

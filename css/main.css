@@ -298,10 +298,37 @@ body {
 .about-me .container {
   margin-bottom: 2em;
   margin-top: 2em;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-right: 0px;
+  padding-left: 0px;
+  overflow: hidden;
+  position: relative;
+}
+
+.about-me .container .background-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: auto;
+  height: auto;
+  -webkit-mask-image: -webkit-gradient(linear, left bottom, left top, from(black), to(rgba(0, 0, 0, 0)));
+  -webkit-mask-image: linear-gradient(to top, black, rgba(0, 0, 0, 0));
+          mask-image: -webkit-gradient(linear, left bottom, left top, from(black), to(rgba(0, 0, 0, 0)));
+          mask-image: linear-gradient(to top, black, rgba(0, 0, 0, 0));
+}
+
+.about-me .container .right-column {
+  position: relative;
 }
 
 .about-me .container .right-column .about-me-text {
   text-align: center;
+}
+
+.about-me .container .right-column .about-me-text-white {
+  text-align: center;
+  color: white;
 }
 
 .about-me .container .right-column .about-me-paragraph {
@@ -319,7 +346,8 @@ body {
 }
 
 .about-me .container .right-column .about-me-cta a {
-  color: var(--primary-colour);
+  color: #1985eb;
+  text-shadow: #64c6ec 0px 0px 1px;
   text-decoration: none;
   padding-bottom: 1em;
 }
@@ -366,6 +394,21 @@ nav li a:hover {
 .mobile-menu-exit:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
+}
+
+.reveal {
+  position: relative;
+  -webkit-transform: translateY(150px);
+          transform: translateY(150px);
+  opacity: 0;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.reveal.active {
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  opacity: 1;
 }
 
 @media only screen and (min-width: 768px) {
@@ -432,8 +475,8 @@ nav li a:hover {
     height: 285px;
   }
   .about-me .container {
-    margin: 2em 2em;
-    padding: 0 2em;
+    margin: 2em 0em;
+    padding: 0 0em;
   }
   .about-me .container .profile-image {
     border-radius: 20em;
@@ -521,8 +564,8 @@ nav li a:hover {
     margin: .5em .8em;
   }
   .about-me .container {
-    margin: 2em 4em;
-    padding: 0 2em;
+    margin: 2em 0em;
+    padding: 0 0em;
   }
   .about-me .container .profile-image {
     border-radius: 20em;

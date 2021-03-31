@@ -5,21 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sean's Portfolio</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
     <div class="navbar">
         <div class="container">
-            <a href="#" class="logo" id="logo-btn"><span>oh</span>oh<span>oh</span>obrien</a>
+            <a id="logo-btn" href="#top-of-page" class="logo" id="logo-btn"><span>oh</span>oh<span>oh</span>obrien</a>
 
-            <img id="mobile-cta" class="mobile-menu" src="images/menu.svg" alt="Open Navigation">
+            <img id="mobile-cta" class="mobile-menu" src="./images/menu.svg" alt="Open Navigation">
 
             <nav>
-                <img id="mobile-exit" class="mobile-menu-exit" src="images/exit.svg" alt="Close Navigation">
+                <img id="mobile-exit" class="mobile-menu-exit" src="./images/exit.svg" alt="Close Navigation">
 
                 <div class="right-menu">
                     <ul class='primary-nav'>
-                        <li><a href="#top-of-page">top of page</a></li>
+                        <li><a id="top-of-page-btn" href="#top-of-page">top of page</a></li>
                         <li><a id="about-btn" href="#about-me" class="nav-link">about me</a></li>
                         <li><a id="dice-btn" href="#dice-hero" class="nav-link">dice app</a></li>
                         <li><a id="orb-btn" href="#orb-hero" class="nav-link">orb game</a></li>
@@ -33,13 +33,15 @@
     <div id='top-of-page'></div>
 
     <div class="profile-image-container">
-        <img src="images/Sean.png" alt="Illustration image" class="profile-image">
+        <img src="./images/Sean.png" alt="Illustration image" class="profile-image">
     </div>
 
     <section class="about-me" id="about-me">
         <div class="container">
             
-            <div class="right-column">
+            <img class="background-image" src="./images/background-keyboard.png" alt="Background image">
+            
+            <div class="right-column reveal">
                 <h1 class="about-me-text">about me</h1>
                 <p class="about-me-paragraph">
                     Hi, I'm Sean.
@@ -59,7 +61,7 @@
                     <br>I hope you enjoy the current projects I have to show, as they were so fun to make and so much was learnt along the way.
                 </p>
                 <div class="about-me-cta">
-                    <h1 class="about-me-text">contact me</h1>
+                    <h1 class="about-me-text-white">contact me</h1>
                     <p></p>
                     <a href="https://www.linkedin.com/in/seanobrien4/" target="_blank" class="cta-link">LinkedIn</a>
                     <a href="downloads/Resume - Sean O'Brien.pdf" target="_blank" class="cta-link" download>resume</a>
@@ -69,8 +71,8 @@
     </section>
 
     <section class="hero" id="dice-hero">
-        <div class="container">
-            <img src="images/endframe.png" alt="Illustration image" class="hero-image">
+        <div class="container reveal">
+            <img src="./images/endframe.png" alt="Illustration image" class="hero-image">
 
             <div class="right-column">
                 <h1 class="hero-text">roll dice with the swing of your phone</h1>
@@ -100,8 +102,8 @@
     </section>
 
     <section class="hero" id="orb-hero">
-        <div class="container">
-            <img src="images/feature.png" alt="Illustration image" class="hero-image">
+        <div class="container reveal">
+            <img src="./images/feature.png" alt="Illustration image" class="hero-image">
 
             <div class="right-column">
                 <h1 class="hero-text">challenge yourself in a swiping frenzy</h1>
@@ -127,8 +129,8 @@
     </section>
 
     <section class="hero" id="web-hero">
-        <div class="container">
-            <img src="images/sample.jpg" alt="Illustration image" class="hero-image">
+        <div class="container reveal">
+            <img src="./images/sample.jpg" alt="Illustration image" class="hero-image">
 
             <div class="right-column">
                 <h1 class="hero-text">beautiful sites designed to your needs</h1>
@@ -147,87 +149,117 @@
 
     <script>
 
-        // Apply the button press to each CTA link
-        element_dict = {};
-        document.querySelectorAll(".cta-link").forEach(link => {
-            if (link.dataset.container != undefined) {
-                link.addEventListener('click', () => {
-                    let dict_name = link.dataset.container;
-                    element_dict[dict_name] = document.getElementById(`${link.dataset.container}`);
-                    if (link.dataset.show == 'True') {
-                        // Remove the window
-                        console.log('Close window.');
-                        element_dict[dict_name].style.animationName = 'scale-down-ver-center';
-                        element_dict[dict_name].onanimationend = () => {
-                            console.log('Animation ended');
+        document.addEventListener("DOMContentLoaded", function(){
+            
+            // Apply the button press to each CTA link
+            element_dict = {};
+            document.querySelectorAll(".cta-link").forEach(link => {
+                if (link.dataset.container != undefined) {
+                    link.addEventListener('click', () => {
+                        let dict_name = link.dataset.container;
+                        element_dict[dict_name] = document.getElementById(`${link.dataset.container}`);
+                        if (link.dataset.show == 'True') {
+                            // Remove the window
+                            console.log('Close window.');
+                            element_dict[dict_name].style.animationName = 'scale-down-ver-center';
+                            element_dict[dict_name].onanimationend = () => {
+                                console.log('Animation ended');
+                                element_dict[dict_name].classList.toggle(link.dataset.toggle);
+                                console.log(element_dict[dict_name]);
+                            };
+                            link.dataset.show = "False";
+                        } else {
+                            // Show the window
+                            console.log('Show window.');
+                            element_dict[dict_name].style.animationName = 'scale-up-ver-center';
                             element_dict[dict_name].classList.toggle(link.dataset.toggle);
+                            element_dict[dict_name].scrollIntoView({ behavior: 'smooth', block: 'center'});
+                            element_dict[dict_name].onanimationend = () => {
+                                link.dataset.show = "True";
+                            };
                             console.log(element_dict[dict_name]);
-                        };
-                        link.dataset.show = "False";
-                    } else {
-                        // Show the window
-                        console.log('Show window.');
-                        element_dict[dict_name].style.animationName = 'scale-up-ver-center';
-                        element_dict[dict_name].classList.toggle(link.dataset.toggle);
-                        element_dict[dict_name].scrollIntoView({ behavior: 'smooth', block: 'center'});
-                        element_dict[dict_name].onanimationend = () => {
-                            link.dataset.show = "True";
-                        };
-                        console.log(element_dict[dict_name]);
-                    }
-                })
-            }
-        })
+                        }
+                    })
+                }
+            })
 
-        // nav bar navigation script
-        const mobileBtn = document.getElementById('mobile-cta')
-            nav = document.querySelector('nav')
-            mobileBtnExit = document.getElementById('mobile-exit');
-            diceBtn = document.getElementById('dice-btn');
-            orbBtn = document.getElementById('orb-btn');
-            webBtn = document.getElementById('web-btn');
-            aboutBtn = document.getElementById('about-btn');
-            logoBtn = document.getElementById('logo-btn');
+            // nav bar navigation script
+            const mobileBtn = document.getElementById('mobile-cta')
+                nav = document.querySelector('nav')
+                mobileBtnExit = document.getElementById('mobile-exit');
+                topOfPageBtn = document.getElementById('top-of-page-btn');
+                diceBtn = document.getElementById('dice-btn');
+                orbBtn = document.getElementById('orb-btn');
+                webBtn = document.getElementById('web-btn');
+                aboutBtn = document.getElementById('about-btn');
+                logoBtn = document.getElementById('logo-btn');
 
-        mobileBtn.addEventListener('click', () => {
-            nav.classList.add('menu-btn');
-        })
+            mobileBtn.addEventListener('click', () => {
+                nav.classList.add('menu-btn');
+            })
 
-        // close nav bar
-        mobileBtnExit.addEventListener('click', () => {
-            nav.classList.remove('menu-btn');
-        })
+            // close nav bar
+            mobileBtnExit.addEventListener('click', () => {
+                nav.classList.remove('menu-btn');
+            })
 
-        diceBtn.addEventListener('click', () => {
-            nav.classList.remove('menu-btn');
-        })
+            topOfPageBtn.addEventListener('click', () => {
+                nav.classList.remove('menu-btn');
+            })
 
-        orbBtn.addEventListener('click', () => {
-            nav.classList.remove('menu-btn');
-        })
+            diceBtn.addEventListener('click', () => {
+                nav.classList.remove('menu-btn');
+            })
 
-        webBtn.addEventListener('click', () => {
-            nav.classList.remove('menu-btn');
-        })
+            orbBtn.addEventListener('click', () => {
+                nav.classList.remove('menu-btn');
+            })
 
-        aboutBtn.addEventListener('click', () => {
-            nav.classList.remove('menu-btn');
-        })
+            webBtn.addEventListener('click', () => {
+                nav.classList.remove('menu-btn');
+            })
 
-        logoBtn.addEventListener('click', () => {
-            nav.classList.remove('menu-btn');
-        })
+            aboutBtn.addEventListener('click', () => {
+                nav.classList.remove('menu-btn');
+            })
 
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
+            logoBtn.addEventListener('click', () => {
+                nav.classList.remove('menu-btn');
+            })
 
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
             });
-        });
-    });
 
+            window.addEventListener('scroll', reveal);
+
+            function reveal() {
+                var reveals = document.querySelectorAll('.reveal');
+
+                for (var i = 0; i < reveals.length; i++) {
+
+                    var windowHeight = window.innerHeight;
+                    var revealTop = reveals[i].getBoundingClientRect().top;
+                    var revealPoint = 150;
+
+                    if (revealTop < windowHeight - revealPoint) {
+                        reveals[i].classList.add('active');
+                    } else {
+                        reveals[i].classList.remove('active');
+                    }
+
+                }
+
+
+            }
+        });
+        
     </script>
 
 </body>
