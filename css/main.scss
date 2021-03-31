@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
 :root {
     --primary-colour: rgb(111, 178, 240);
@@ -59,9 +60,16 @@ body {
 
 .hero .container {
     background-color: var(--primary-colour);
+    background: repeating-linear-gradient(
+    45deg,
+    var(--primary-colour),
+    var(--primary-colour),
+    #1481da 10px,
+    #1e8ccc 10px,
+    );
     justify-content: space-between;
     text-align: center;
-    margin-top: 2em;
+    margin-top: 3em;
     padding-top: 3em;
     padding-bottom: .25em;    
 
@@ -82,7 +90,8 @@ body {
             text-align: center;
             margin: .5em 1.5em;
             text-transform: uppercase;
-            color: rgb(43, 43, 43);
+            color: rgb(255, 255, 255);
+            font-family: 'Varela Round';
         }
 
         .hero-cta {
@@ -129,8 +138,6 @@ body {
         }
     }
 }
-
-
 
 @keyframes scale-up-ver-center {
     0% {
@@ -185,6 +192,7 @@ body {
     padding-top: 1em;
     padding-bottom: 1em;
     box-shadow: 4px 4px 14px #000;
+    background-color: var(--primary-colour);
 }
 
 .video-show {
@@ -207,32 +215,120 @@ body {
     animation-duration: .6s;
     animation-play-state: default;
     animation-direction: forwards;
+    background-color: var(--primary-colour);
 }
 
 .read-show {
     display: block;
 }
 
+@keyframes profile-reveal-from-above {
+    0% {
+        transform: translateY(-150px);
+        opacity: 0;
+    }
+
+    60% {
+        opacity: .5;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes profile-reveal-from-below {
+    0% {
+        transform: translateY(150px);
+        opacity: 0;
+    }
+
+    60% {
+        opacity: .5;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes profile-reveal-load-gradient {
+    0% {
+        background-color: black;
+        opacity: 0;
+    }
+
+    60% {
+        opacity: .5;
+    }
+
+    100% {
+        background-color: rgb(255, 255, 255);
+        opacity: 1;
+    }
+}
+
+
 .profile-image-container {
 
     background-color: var(--primary-colour);
+    background: repeating-linear-gradient(
+    45deg,
+    var(--primary-colour),
+    var(--primary-colour),
+    #1481da 10px,
+    #1e8ccc 10px,
+    );
     margin: 1em 0em;
-    padding: 1em;
+    padding: 3em;
+    height: 700px;
+    animation-name: profile-reveal-load-gradient;
+    animation-duration: 1.5s;
+    animation-direction: forwards;
 
     .profile-image {
         border-radius: 20em;
-        height: 20%;
-        width: 20%;
+        min-height: 200px;
+        min-width: 200px;
+        height: auto;
+        width: auto;
+        max-height: 30%;
+        max-width: 22.5%;
         display: block;
         padding: 4em auto;
         margin-left: auto;
         margin-right: auto;
         border: 5px solid white;
+        animation-name: profile-reveal-from-above;
+        animation-duration: 1.5s;
+        animation-direction: forwards;
+    }
+
+    .container {
+
+        padding-top: 2em;
+        animation-name: profile-reveal-from-below;
+        animation-duration: 1.5s;
+        animation-direction: forwards;
+
+        .profile-words {
+
+            color: rgb(245, 245, 245);
+            text-align: center;
+            font-size: 2.5em;
+            font-weight: bold;
+            letter-spacing: 5px;
+            line-height: 3;
+            font-family: 'Varela Round';
+        }
+
     }
 }
 
 .about-me .container {
-    margin-bottom: 2em;
+    margin-bottom: 0em;
     margin-top: 2em;
     margin-left: 0px;
     margin-right: 0px;
@@ -269,17 +365,18 @@ body {
             text-justify: inter-word;
             padding: 0 2em;
             line-height: 1.6em;
-            font-size: 0.8em;
+            font-size: 1em;
 
         }
 
         .about-me-cta {
             text-align: center;
             display: grid;
+            text-shadow: var(--primary-colour) 0px 0px 4px;
             
             a {
-                color:  rgb(25, 133, 235);
-                text-shadow: rgb(100, 198, 236) 0px 0px 1px;
+                color:  rgb(255, 255, 255);
+                text-shadow: var(--primary-colour) 0px 0px 4px;
                 text-decoration: none;
                 padding-bottom: 1em;
             }
@@ -418,7 +515,7 @@ nav {
 
     
     .about-me .container {
-        margin: 2em 0em; //
+        margin: 2em 0em 0em 0em; //
         padding: 0 0em; //
     
         .profile-image {
@@ -429,7 +526,7 @@ nav {
     
         .right-column {
             margin: 2em 2em; //
-            padding: 0 2em; //
+            padding: 0 8em; //
 
             .about-me-text {
                 //margin: 2em 4em; //
@@ -462,7 +559,7 @@ nav {
             height: 40%;
             border-radius: 4em;
             margin: 4em;
-            padding: 1em;
+            padding: 0em;
         }
     
         .right-column {
@@ -522,7 +619,7 @@ nav {
     }
 
     .about-me .container {
-        margin: 2em 0em; //
+        margin: 2em 0em 0em 0em; //
         padding: 0 0em; //
     
         .profile-image {
@@ -533,7 +630,7 @@ nav {
     
         .right-column {
             margin: 2em 2em; //
-            padding: 0 2em; //
+            padding: 0 20em; //
 
             .about-me-text {
                 //margin: 2em 4em; //

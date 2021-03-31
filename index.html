@@ -34,6 +34,9 @@
 
     <div class="profile-image-container">
         <img src="./images/Sean.png" alt="Illustration image" class="profile-image">
+        <div class="container">
+            <p class="profile-words">web designer<br> creative thinker<br> language lover</p>
+        </div>
     </div>
 
     <section class="about-me" id="about-me">
@@ -246,7 +249,7 @@
 
                     var windowHeight = window.innerHeight;
                     var revealTop = reveals[i].getBoundingClientRect().top;
-                    var revealPoint = 150;
+                    var revealPoint = 50;
 
                     if (revealTop < windowHeight - revealPoint) {
                         reveals[i].classList.add('active');
