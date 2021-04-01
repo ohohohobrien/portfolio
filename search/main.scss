@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+:root {
+    --grey-colour: rgb(230, 230, 230);
+    --lighter-grey-colour: rgb(243, 243, 243);
+    --lighter-black-colour: rgb(43, 43, 43);
+    --lighter-light-black-colour: rgb(126, 126, 126);
+}
+
+body {
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Ubuntu';
+    margin-top: 0;
+
+    .navbar {
+        width: auto;
+        padding: 1em;
+
+        .nav-links-container {
+            float: right;
+
+            .nav-links {
+                margin: 0 .5em;
+
+                .link {
+                    text-decoration: none;
+                    margin: 0 .5em;
+                    font-size: 0.8em;
+                    color: black;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    .hero-container {
+        margin-top: 10em;
+        margin-left: auto;
+        margin-right: auto;
+
+        .hero-text-container {
+            margin: 0 auto;
+
+            .hero-text {
+                font-size: 5em;
+                text-align: center;
+                font-weight: 500;
+                letter-spacing: -2px;
+                
+            }
+
+            .sub-text-container {
+                margin: 0 auto;
+                text-align: center;
+                display: grid;
+
+                .hero-sub-text {
+                    font-size: .8em;
+                    margin-left: 14em;
+                    margin-top: -7em;
+                    font-weight: 500;
+
+                    .blue-text {
+                        color: rgb(58, 121, 238);
+                    }
+                }
+            }
+        }
+
+        .search-bar-container {
+            margin: -3em auto;
+            text-align: center;
+
+            .search-form {
+                
+                
+                .search-bar {
+                    margin: 0 auto;
+                    border: 1px solid var(--grey-colour);
+                    width: 500px;
+                    height: 45px;
+                    border-radius: 10em;
+                    outline: none;
+                    padding: 0 2em;
+                    font-size: 1.2em;
+    
+                    &:hover {
+                        box-shadow: 0px 3px 10px 1px var(--grey-colour);
+                    }
+                }
+    
+                .search-button-container {
+                    margin: 2em;
+                    text-align: center;
+    
+                    .search-button {
+                        margin: 0 .5em;
+                        width: 130px;
+                        height: 35px;
+                        background-color: rgb(250, 250, 250);
+                        border: none;
+                        border-radius: .3em;
+    
+                        &:hover {
+                            box-shadow: 0px .5px 0px 1.5px var(--grey-colour);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.blue-text {
+    color: rgb(58, 121, 238);
+}
+
+.red-text {
+    color: rgb(248, 76, 46);
+}
+
+.yellow-text {
+    color: rgb(238, 199, 28);
+}
+
+.green-text {
+    color: rgb(85, 155, 4);
+}
+
+.navbar-advanced {
+
+    padding: 1em;
+    background-color: var(--lighter-grey-colour);
+}
+
+.logo {
+    left: 0;
+    top: 0;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.5em;
+    letter-spacing: -3px;
+}
+
+.advanced-search-text {
+    margin: 1.4em 0;
+    padding: 0 2.5em;
+    color: rgb(224, 72, 1);
+    font-size: 1.2em;
+}
+
+.underline {
+
+    width: auto;
+    height: 1px;
+    background-color: var(--lighter-grey-colour);
+}
+
+.header-container {
+
+    margin-top: 1.8em;
+    color: var(--lighter-black-colour);
+
+    .title-header {
+        display: flex;
+        place-content: space-between;
+        padding: 0 1em;
+
+        .title-header-text {
+            margin-left: 2em;
+            margin-right: 5em;
+        }
+
+        .title-header-expl {
+            justify-content: left;
+            color: var(--lighter-light-black-colour);
+            font-size: 0.8em;
+            font-weight: 500;
+        }
+    }
+}
+
+.grid {
+    margin-top: 4em;
+    display: grid;
+    padding: .5em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    grid-column-gap: .2em;
+    grid-row-gap: .5em;
+    grid-template-columns: 200px 580px auto;
+    grid-template-rows: 30px 30px 30px 30px;
+}
+
+.grid-text {
+    padding: 1em;
+    color: var(--lighter-black-colour);
+
+    .adv-text-title {
+        margin-top: -.3em;
+    }
+
+    .title-header-text {
+        font-size: 1.2em;
+        margin-top: -1.4em;
+        margin-left: 0.2em;
+        color: var(--lighter-black-colour);
+    }
+}
+
+.grid-search {
+    width: auto;
+    height: auto;
+
+    .adv-search-bar {
+        width: 560px;
+        height: 20px;
+        outline-color: rgb(77, 127, 235);
+    }
+    
+    .adv-search-button {
+        background-color: rgb(63, 145, 252);
+        color: white;
+        font-size: .8em;
+        font-weight: bold;
+        width: 120px;
+        height: 30px;
+        border-radius: 0.1em;
+        border: 1px solid  rgb(20, 120, 250);
+        float: right;
+        margin-right: 15px;
+        margin-top: -10px;
+    }
+}
+
+.grid-exp {
+
+    margin-top: -.5em;
+    font-size: .8em;
+    color: var(--lighter-black-colour);
+
+    .search-eg {
+        font-family: 'Roboto Mono';
+    }
+
+    .title-header-expl {
+        margin-top: -0.4em;
+        justify-content: left;
+        color: var(--lighter-light-black-colour);
+        font-size: 1.3em;
+        font-weight: 500;
+    }
+}
+
+.advanced-search-container {
+
+    margin-left: 2em;
+    font-size: 0.8em;
+
+}
+
+
+
+@media screen and (max-width: 600px) {
+
+    body {
+        .hero-container {
+            .search-bar-container {
+                .search-form {
+                    .search-bar {
+                        width: 80%;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 990px) {
+
+    .grid-exp {
+        display: none;
+    }
+
+    .grid {
+        grid-template-columns: 200px auto;
+    }
+
+    .grid-search {
+        margin-right: 15em;
+        grid-column: auto;
+        
+        .adv-search-bar {
+            min-width: 100%;
+            display: flex;
+        }
+    }
+}
+
+// from here change it...?
+
+@media screen and (max-width: 990px) {
+
+    .grid-search {
+        grid-column: auto;
+        
+        .adv-search-bar {
+            width: auto;
+        }
+    }
+}

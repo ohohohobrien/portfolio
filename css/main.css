@@ -9,7 +9,8 @@ body {
   margin: 0;
   margin-top: 1em;
   font-family: 'Ubuntu';
-  padding-top: 2em;
+  padding-top: 4em;
+  padding-bottom: 4em;
 }
 
 .hero:before {
@@ -382,7 +383,7 @@ body {
   background: repeating-linear-gradient(45deg, var(--primary-colour), var(--primary-colour), #1481da 10px, #1e8ccc 10px);
   margin: 1em 0em;
   padding: 3em;
-  height: 750px;
+  height: 600px;
   -webkit-animation-name: profile-reveal-load-gradient;
           animation-name: profile-reveal-load-gradient;
   -webkit-animation-duration: 1.5s;
@@ -426,10 +427,11 @@ body {
 .profile-image-container .container .profile-words {
   color: whitesmoke;
   text-align: center;
-  font-size: 2.5em;
+  font-size: 1.5em;
   font-weight: bold;
   letter-spacing: 5px;
-  line-height: 2;
+  line-height: 4;
+  font-style: italic;
   font-family: 'Varela Round';
 }
 
@@ -492,13 +494,14 @@ hr {
   display: -ms-grid;
   display: grid;
   text-shadow: var(--primary-colour) 0px 0px 4px;
+  margin: 2em 0;
 }
 
 .about-me .container .right-column .about-me-cta a {
   color: white;
   text-shadow: var(--primary-colour) 0px 0px 4px;
   text-decoration: none;
-  padding-bottom: 1em;
+  padding-bottom: 2em;
 }
 
 nav.menu-btn {
@@ -651,7 +654,7 @@ nav li a:hover {
     background: repeating-linear-gradient(45deg, var(--primary-colour), var(--primary-colour), #1481da 10px, #1e8ccc 10px);
     margin: 1em 0em;
     padding: 3em;
-    height: 750px;
+    height: 700px;
     -webkit-animation-name: profile-reveal-load-gradient;
             animation-name: profile-reveal-load-gradient;
     -webkit-animation-duration: 1.5s;
@@ -701,7 +704,7 @@ nav li a:hover {
   }
   .hero .container .right-column .hero-cta {
     margin-bottom: 1em;
-    margin-top: 3em;
+    margin-top: 1em;
   }
   .hero .container .right-column .hero-cta .cta-link {
     text-align: center;
