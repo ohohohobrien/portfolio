@@ -1,2 +1,2 @@
 # portfolio
-This is a website for my portfolio as a programmer.
+This is a website for my portfolio as a developer.
