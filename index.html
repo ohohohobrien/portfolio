@@ -21,6 +21,7 @@
                     <ul class='primary-nav'>
                         <li><a id="top-of-page-btn" href="#top-of-page">top of page</a></li>
                         <li><a id="about-btn" href="#about-me" class="nav-link">about me</a></li>
+                        <li><a id="walk-btn" href="#walk-hero" class="nav-link">web app</a></li>
                         <li><a id="dice-btn" href="#dice-hero" class="nav-link">dice app</a></li>
                         <li><a id="orb-btn" href="#orb-hero" class="nav-link">orb game</a></li>
                         <li><a id="web-btn" href="#web-hero" class="nav-link">websites</a></li>
@@ -35,7 +36,9 @@
     <div class="profile-image-container">
         <img src="./images/profile-image.jpg" alt="Illustration image" class="profile-image">
         <div class="container">
-            <p class="profile-words">web designer,<br> creative thinker,<br> language lover.</p>
+            <p class="profile-words profile-1">web designer,</p>
+            <p class="profile-words profile-2">creative thinker,</p>
+            <p class="profile-words profile-3">language lover.</p>
         </div>
     </div>
 
@@ -75,9 +78,61 @@
         </div>
     </section>
 
+    <section class="hero" id="walk-hero">
+        <div class="container reveal">
+            <div class="left-column">
+                <img src="./images/IWentHere.png" alt="Illustration image" class="hero-image">
+                <div class="code-markers-container">
+                    <div class="code-marker code-block-load-in">Python</div>
+                    <div class="code-marker code-block-load-in">Django</div>
+                    <div class="code-marker code-block-load-in">HTML</div>
+                </div>
+                <div class="code-markers-container">
+                    <div class="code-marker code-block-load-in">CSS</div>
+                    <div class="code-marker code-block-load-in">JavaScript</div>
+                    <div class="code-marker code-block-load-in">OpenLayers</div>
+                </div>
+            </div>
+
+            <div class="right-column">
+                <h1 class="hero-text">discover and share local hidden gems</h1>
+                
+                <div class="hero-cta">
+                    <a href="https://ohohohobrien.pythonanywhere.com/" target="_blank" class="cta-link">try it out</a>
+                    <p></p>
+                    <p id="walk-video-btn" class="cta-link" data-show="False" data-container="walk-video" data-toggle="video-show">watch it in action</p>
+                    <div id="walk-video" class="video-container">
+                        <iframe class="video-player" width=auto height=auto src="https://www.youtube.com/embed/Ns6IfVvHfwI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <p id="walk-read-btn" class="cta-link" data-show="False" data-container="walk-read-text" data-toggle="read-show">read more</p>
+                    <div id='walk-read-text' class="read-more-container">
+                        <p class="cta-text">
+                            This web application was created with Python using Djange as a framework, SQLite, HTML, CSS (using SASS) and Javascript. 
+                            <br>
+                            <br>This is a fully mobile responsive web app that allows users to log in, search and create walking route maps to share with other users.
+                            <br>
+                            <br>The website is built around utilising OpenLayers v6 to display map information which is controlled through their library and Javascript.
+                            <br>
+                            <br>The application dynamically displays HTML through Django. Fetch requests to the server and communication between the HTML in the client browser is achieved through Javascript interactions. For example, when the "Country Name" dropdown box is changed, this activates a listener to fetch the associated "State Names" and populate the dropdown box. 
+                            <br>
+                            <br>Please watch the video to see it in action, or better yet click "try it out" and see how it is yourself!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="hero" id="dice-hero">
         <div class="container reveal">
-            <img src="./images/endframe.png" alt="Illustration image" class="hero-image">
+            <div class="left-column">
+                <img src="./images/endframe.png" alt="Illustration image" class="hero-image">
+                <div class="code-markers-container">
+                    <div class="code-marker code-block-load-in">C#</div>
+                    <div class="code-marker code-block-load-in">Android</div>
+                    <div class="code-marker code-block-load-in">Unity</div>
+                </div>
+            </div>
 
             <div class="right-column">
                 <h1 class="hero-text">roll virtual dice as if they were in the palm of your hand</h1>
@@ -110,7 +165,14 @@
 
     <section class="hero" id="orb-hero">
         <div class="container reveal">
-            <img src="./images/feature.png" alt="Illustration image" class="hero-image">
+            <div class="left-column">
+                <img src="./images/feature.png" alt="Illustration image" class="hero-image">
+                <div class="code-markers-container">
+                    <div class="code-marker code-block-load-in">C#</div>
+                    <div class="code-marker code-block-load-in">Android</div>
+                    <div class="code-marker code-block-load-in">Unity</div>
+                </div>
+            </div>
 
             <div class="right-column">
                 <h1 class="hero-text">an intense swiping challenge</h1>
@@ -141,21 +203,77 @@
 
     <section class="hero" id="web-hero">
         <div class="container reveal">
-            <img src="./images/sample.jpg" alt="Illustration image" class="hero-image">
+            <div class="left-column">
+                <img src="./images/sample.jpg" alt="Illustration image" class="hero-image">
+                <div class="code-markers-container">
+                    <div class="code-marker code-block-load-in">Python</div>
+                    <div class="code-marker code-block-load-in">Django</div>
+                    <div class="code-marker code-block-load-in">HTML</div>
+                </div>
+                <div class="code-markers-container">
+                    <div class="code-marker code-block-load-in">CSS</div>
+                    <div class="code-marker code-block-load-in">JavaScript</div>
+                    <div class="code-marker code-block-load-in">Bootstrap</div>
+                </div>
+            </div>
 
             <div class="right-column">
                 <h1 class="hero-text">web design to meet your needs</h1>
                 
                 <div class="hero-cta">
-                    <p id="web-read-btn" class="cta-link" data-show="False" data-container="web-read-text" data-toggle="read-show">This Site</p>
-                    <div id='web-read-text' class="read-more-container">
+                    <p id="web-project4-btn" class="cta-link" data-show="False" data-container="web-project4-text" data-toggle="read-show">Twitter</p>
+                    <div id='web-project4-text' class="read-more-container">
+                        <h2>Twitter</h2>
                         <p class="cta-text">
-                            This site has been prepared from scratch using HTML, CSS and Javascript. Emphasis was placed on responsive web design and enhancing the user experience with CSS animation and Javascript (such as the card transitions). 
+                            This is a web app built using Javascript and my own built API's to allow "like" and "save" interactions for Twiter-like posts. The project utilises Python with the Django framework in addition to HTML, CSS and Javascript. 
                             <br>
-                            <br>This highlights the Front End aspects of web development, whereas my other projects below delve into the Back End aswell.
+                            <br>
+                            The site is designed to match Twitter, providing each account with a profile page and the ability to like and save posts through Javascript fetch requests therefore not requiring any page refreshes. I have also built in edit and delete functions using Javascript. The posts that are returned from the server are pagified to 10 posts per page. In addition, this project utilised bootstrap for styling. 
+                            <br>
+                            <br>
+                            As this is a dynamic site, I don't have it hosted currently so please feel free to review the code or watch my video explanation. 
                         </p>
+                        <a href="https://github.com/ohohohobrien/Network" target="_blank" class="cta-link">GitHub repository</a>
+                        <a href="https://youtu.be/6tkSe3Yzlps" target="_blank" class="cta-link">Video explanation</a>
                     </div>
                 </div>
+                
+                <div class="hero-cta">
+                    <p id="web-project3-btn" class="cta-link" data-show="False" data-container="web-project3-text" data-toggle="read-show">Gmail Client</p>
+                    <div id='web-project3-text' class="read-more-container">
+                        <h2>Gmail Client</h2>
+                        <p class="cta-text">
+                            This is a single page web app built using Javascript and a 3rd party API. The project does utilise Python and Django, however I only wrote the HTML, CSS and Javascript elements. Users must log in and have access to an inbox, sent and archive mailbox and also allows them to send emails to registered users. To accomplish this, Javascript is used to communicate with an API (not created by me) which will either store or retreive certain data based on the current page's requests. The site is a single page web app designed after the Gmail client. As this is a dynamic site, I don't have it hosted currently so please feel free to review the code or watch my video explanation. 
+                        </p>
+                        <a href="https://github.com/ohohohobrien/Mail" target="_blank" class="cta-link">GitHub repository</a>
+                        <a href="https://youtu.be/6tkSe3Yzlps" target="_blank" class="cta-link">Video explanation</a>
+                    </div>
+                </div>
+                
+                <div class="hero-cta">
+                    <p id="web-project2-btn" class="cta-link" data-show="False" data-container="web-project2-text" data-toggle="read-show">Ebay Auction House</p>
+                    <div id='web-project2-text' class="read-more-container">
+                        <h2>Ebay Auction House</h2>
+                        <p class="cta-text">
+                            This web app is built with Django and Python. It allows users to create and edit auction listings simulating an Ebay style site. In addition, the site allows users to post comments, bid and close bids. The site dynamically creates listings storing them in relational databases and has a search function in built which accesses those databases. As this is a dynamic site, I don't have it hosted currently so please feel free to review the code or watch my video explanation. 
+                        </p>
+                        <a href="https://github.com/ohohohobrien/Commerce" target="_blank" class="cta-link">GitHub repository</a>
+                        <a href="https://youtu.be/wALzwgX1EJs" target="_blank" class="cta-link">Video explanation</a>
+                    </div>
+                </div>
+
+                <div class="hero-cta">
+                    <p id="web-project1-btn" class="cta-link" data-show="False" data-container="web-project1-text" data-toggle="read-show">Wikipedia</p>
+                    <div id='web-project1-text' class="read-more-container">
+                        <h2>Wikipedia</h2>
+                        <p class="cta-text">
+                            This web app is built with Django and Python. It allows users to create and edit articles simulating a wikipedia style site. The site dynamically creates pages and has a search function in built. As this is a dynamic site, I don't have it hosted currently so please feel free to review the code or watch my video explanation. 
+                        </p>
+                        <a href="https://github.com/ohohohobrien/Wikipedia" target="_blank" class="cta-link">GitHub repository</a>
+                        <a href="https://youtu.be/hnFEj1cXA2Y" target="_blank" class="cta-link">Video explanation</a>
+                    </div>
+                </div>
+
                 <div class="hero-cta">
                     <p id="web-project0-btn" class="cta-link" data-show="False" data-container="web-project0-text" data-toggle="read-show">Google Search</p>
                     <div id='web-project0-text' class="read-more-container">
@@ -168,39 +286,18 @@
                         <a href="https://youtu.be/OfztqiDhKxc" target="_blank" class="cta-link">Video explanation</a>
                     </div>
                 </div>
+
                 <div class="hero-cta">
-                    <p id="web-project1-btn" class="cta-link" data-show="False" data-container="web-project1-text" data-toggle="read-show">Wikipedia</p>
-                    <div id='web-project1-text' class="read-more-container">
-                        <h2>Wikipedia</h2>
+                    <p id="web-read-btn" class="cta-link" data-show="False" data-container="web-read-text" data-toggle="read-show">This Site</p>
+                    <div id='web-read-text' class="read-more-container">
                         <p class="cta-text">
-                            This web app is built with Django and Python. It allows users to create and edit articles simulating a wikipedia style site. The site dynamically creates pages and has a search function in built. As this is a dynamic site, I don't have it hosted currently so please feel free to review the code or watch my video explanation. 
+                            This site has been prepared from scratch using HTML, CSS and Javascript. Emphasis was placed on responsive web design and enhancing the user experience with CSS animation and Javascript (such as the card transitions). 
+                            <br>
+                            <br>This highlights the Front End aspects of web development, whereas my other projects below delve into the Back End aswell.
                         </p>
-                        <a href="https://github.com/ohohohobrien/Wikipedia" target="_blank" class="cta-link">GitHub repository</a>
-                        <a href="https://youtu.be/hnFEj1cXA2Y" target="_blank" class="cta-link">Video explanation</a>
                     </div>
                 </div>
-                <div class="hero-cta">
-                    <p id="web-project2-btn" class="cta-link" data-show="False" data-container="web-project2-text" data-toggle="read-show">Ebay Auction House</p>
-                    <div id='web-project2-text' class="read-more-container">
-                        <h2>Ebay Auction House</h2>
-                        <p class="cta-text">
-                            This web app is built with Django and Python. It allows users to create and edit auction listings simulating an Ebay style site. In addition, the site allows users to post comments, bid and close bids. The site dynamically creates listings storing them in relational databases and has a search function in built which accesses those databases. As this is a dynamic site, I don't have it hosted currently so please feel free to review the code or watch my video explanation. 
-                        </p>
-                        <a href="https://github.com/ohohohobrien/Commerce" target="_blank" class="cta-link">GitHub repository</a>
-                        <a href="https://youtu.be/wALzwgX1EJs" target="_blank" class="cta-link">Video explanation</a>
-                    </div>
-                </div>
-                <div class="hero-cta">
-                    <p id="web-project3-btn" class="cta-link" data-show="False" data-container="web-project3-text" data-toggle="read-show">Gmail Client</p>
-                    <div id='web-project3-text' class="read-more-container">
-                        <h2>Gmail Client</h2>
-                        <p class="cta-text">
-                            This is a single page web app built using Javascript and a 3rd party API. The project does utilise Python and Django, however I only wrote the HTML, CSS and Javascript elements. Users must log in and have access to an inbox, sent and archive mailbox and also allows them to send emails to registered users. To accomplish this, Javascript is used to communicate with an API (not created by me) which will either store or retreive certain data based on the current page's requests. The site is a single page web app designed after the Gmail client. As this is a dynamic site, I don't have it hosted currently so please feel free to review the code or watch my video explanation. 
-                        </p>
-                        <a href="https://github.com/ohohohobrien/Mail" target="_blank" class="cta-link">GitHub repository</a>
-                        <a href="https://youtu.be/6tkSe3Yzlps" target="_blank" class="cta-link">Video explanation</a>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </section>
@@ -246,6 +343,7 @@
                 nav = document.querySelector('nav')
                 mobileBtnExit = document.getElementById('mobile-exit');
                 topOfPageBtn = document.getElementById('top-of-page-btn');
+                walkBtn = document.getElementById('walk-btn');
                 diceBtn = document.getElementById('dice-btn');
                 orbBtn = document.getElementById('orb-btn');
                 webBtn = document.getElementById('web-btn');
@@ -262,6 +360,10 @@
             })
 
             topOfPageBtn.addEventListener('click', () => {
+                nav.classList.remove('menu-btn');
+            })
+
+            walkBtn.addEventListener('click', () => {
                 nav.classList.remove('menu-btn');
             })
 
@@ -314,8 +416,24 @@
 
                 }
 
+                var codeBlocks = document.querySelectorAll('.code-block-load-in');
 
+                for (var i = 0; i < codeBlocks.length; i++) {
+
+                    var windowHeight = window.innerHeight;
+                    var revealCodeTop = codeBlocks[i].getBoundingClientRect().top;
+                    var revealCodePoint = -100;
+
+                    if (revealCodeTop < windowHeight - revealCodePoint) {
+                        codeBlocks[i].classList.add('active');
+                    } else {
+                        codeBlocks[i].classList.remove('active');
+                    }
+
+                }
             }
+
+
         });
         
     </script>
