@@ -11,17 +11,17 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ohohohobrien.github.io/portfolio/">
+    <meta property="og:url" content="https://metatags.io/">
     <meta property="og:title" content="Sean's Portfolio">
     <meta property="og:description" content="A web design and mobile application portfolio showcasing works created by Sean. Please consider having a look!">
-    <meta property="og:image" content="https://ohohohobrien.github.io/portfolio/images/Sean.png">
+    <meta property="og:image" content="./images/IWentHere.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://ohohohobrien.github.io/portfolio/">
+    <meta property="twitter:url" content="https://metatags.io/">
     <meta property="twitter:title" content="Sean's Portfolio">
     <meta property="twitter:description" content="A web design and mobile application portfolio showcasing works created by Sean. Please consider having a look!">
-    <meta property="twitter:image" content="https://ohohohobrien.github.io/portfolio/images/Sean.png">
+    <meta property="twitter:image" content="./images/IWentHere.png">
 
     <link rel="shortcut icon" href="./images/favicon.ico">
 
@@ -41,7 +41,8 @@
                     <ul class='primary-nav'>
                         <li><a id="top-of-page-btn" href="#top-of-page">top of page</a></li>
                         <li><a id="about-btn" href="#about-me" class="nav-link">about me</a></li>
-                        <li><a id="walk-btn" href="#walk-hero" class="nav-link">web app</a></li>
+                        <li><a id="CBT-btn" href="#CBT-hero" class="nav-link">web app #1</a></li>
+                        <li><a id="walk-btn" href="#walk-hero" class="nav-link">web app #2</a></li>
                         <li><a id="dice-btn" href="#dice-hero" class="nav-link">dice app</a></li>
                         <li><a id="orb-btn" href="#orb-hero" class="nav-link">orb game</a></li>
                         <li><a id="web-btn" href="#web-hero" class="nav-link">websites</a></li>
@@ -73,7 +74,7 @@
                 <p class="about-me-paragraph">
                     <span style="font-weight: bold;">G'day! I'm Sean,</span> 
                     <br>
-                    <br>I am a web developer based in Tokyo, Japan.
+                    <br>I am a self taught developer based in Tokyo, Japan.
                     <br>
                     <br>My experiences range from web app development utilising Python, Django, HTML, CSS and Javascript to mobile app development with C#.
                     <br>
@@ -93,6 +94,51 @@
                     <p></p>
                     <a href="https://www.linkedin.com/in/seanobrien4/" target="_blank" class="cta-link">LinkedIn</a>
                     <a href="downloads/Resume - Sean O'Brien.pdf" target="_blank" class="cta-link" download>resume</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hero" id="CBT-hero">
+        <div class="container reveal">
+            <div class="left-column">
+                <img src="./images/CBT.png" alt="Illustration image" class="hero-image">
+                <div class="code-markers-container">
+                    <div class="code-marker code-block-load-in">JavaScript</div>
+                    <div class="code-marker code-block-load-in">HTML</div>
+                    <div class="code-marker code-block-load-in">CSS</div>
+                </div>
+                <div class="code-markers-container">
+                    <div class="code-marker code-block-load-in">Figma</div>
+                    <div class="code-marker code-block-load-in">JSpdf</div>
+                    <div class="code-marker code-block-load-in">Single Page App</div>
+                </div>
+            </div>
+
+            <div class="right-column">
+                <h1 class="hero-text">rewire your brain in a single page app</h1>
+                
+                <div class="hero-cta">
+                    <a href="https://ohohohobrien.github.io/CBTLog/" target="_blank" class="cta-link">try it out</a>
+                    <p></p>
+                    <p id="CBT-read-btn" class="cta-link" data-show="False" data-container="CBT-read-text" data-toggle="read-show">read more</p>
+                    <div id='CBT-read-text' class="read-more-container">
+                        <p class="cta-text">
+                            This single page web application was created with JavaScript, HTML, CSS (using SASS) and integrates JSpdf. 
+                            <br>
+                            <br>This is designed for mobile browser users and uses vanilla JavaScript to deliver a seemless single page app.
+                            <br>
+                            <br>The site allows a user to input information required for CBT (Cognitive Behavioural Therapy) and generate a clean PDF summary.
+                            <br>
+                            <br>As users of this struggle with motivation, the app is designed to deliver minimal information at a single point for the user experience. 
+                            <br>
+                            <br>Note that all of the UX and UI is designed around positive reinforcement and a push for continuing forward.
+                            <br>
+                            <br>Please try it yourself - you might even feel better!
+                            <br>
+                        </p>
+                        <a class="cta-link" href="https://github.com/ohohohobrien/CBTLog" target="_blank">GitHub repository</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -119,8 +165,6 @@
                 
                 <div class="hero-cta">
                     <a href="https://ohohohobrien.pythonanywhere.com/" target="_blank" class="cta-link">try it out</a>
-                    <p></p>
-                    <a href="https://github.com/ohohohobrien/iwenthere" target="_blank" class="cta-link">check the code</a>
                     <p></p>
                     <p id="walk-video-btn" class="cta-link" data-show="False" data-container="walk-video" data-toggle="video-show">watch it in action</p>
                     <div id="walk-video" class="video-container">
@@ -153,9 +197,6 @@
                     <div class="code-marker code-block-load-in">C#</div>
                     <div class="code-marker code-block-load-in">Android</div>
                     <div class="code-marker code-block-load-in">Unity</div>
-                </div>
-                <div class="code-markers-container">
-                    <div class="code-marker code-block-load-in">Blender</div>
                 </div>
             </div>
 
@@ -315,14 +356,10 @@
                 <div class="hero-cta">
                     <p id="web-read-btn" class="cta-link" data-show="False" data-container="web-read-text" data-toggle="read-show">This Site</p>
                     <div id='web-read-text' class="read-more-container">
-                        <h2>Portfolio Site</h2>
                         <p class="cta-text">
                             This site has been prepared from scratch using HTML, CSS and Javascript. Emphasis was placed on responsive web design and enhancing the user experience with CSS animation and Javascript (such as the card transitions). 
                             <br>
                             <br>This highlights the Front End aspects of web development, whereas my other projects below delve into the Back End aswell.
-                            <br>
-                            <br>Why not check out the code below?
-                            <br>
                         </p>
                         <a href="https://github.com/ohohohobrien/portfolio" target="_blank" class="cta-link">GitHub repository</a>
                     </div>
@@ -373,6 +410,7 @@
                 nav = document.querySelector('nav')
                 mobileBtnExit = document.getElementById('mobile-exit');
                 topOfPageBtn = document.getElementById('top-of-page-btn');
+                cbtBtn = document.getElementById('CBT-btn');
                 walkBtn = document.getElementById('walk-btn');
                 diceBtn = document.getElementById('dice-btn');
                 orbBtn = document.getElementById('orb-btn');
@@ -390,6 +428,10 @@
             })
 
             topOfPageBtn.addEventListener('click', () => {
+                nav.classList.remove('menu-btn');
+            })
+
+            cbtBtn.addEventListener('click', () => {
                 nav.classList.remove('menu-btn');
             })
 
