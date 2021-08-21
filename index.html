@@ -41,8 +41,9 @@
                     <ul class='primary-nav'>
                         <li><a id="top-of-page-btn" href="#top-of-page">top of page</a></li>
                         <li><a id="about-btn" href="#about-me" class="nav-link">about me</a></li>
-                        <li><a id="CBT-btn" href="#CBT-hero" class="nav-link">web app #1</a></li>
-                        <li><a id="walk-btn" href="#walk-hero" class="nav-link">web app #2</a></li>
+                        <li><a id="punny-btn" href="#punny-hero" class="nav-link">web app #1</a></li>
+                        <li><a id="CBT-btn" href="#CBT-hero" class="nav-link">web app #2</a></li>
+                        <li><a id="walk-btn" href="#walk-hero" class="nav-link">web app #3</a></li>
                         <li><a id="dice-btn" href="#dice-hero" class="nav-link">dice app</a></li>
                         <li><a id="orb-btn" href="#orb-hero" class="nav-link">orb game</a></li>
                         <li><a id="web-btn" href="#web-hero" class="nav-link">websites</a></li>
@@ -94,6 +95,54 @@
                     <p></p>
                     <a href="https://www.linkedin.com/in/seanobrien4/" target="_blank" class="cta-link">LinkedIn</a>
                     <a href="downloads/Resume - Sean O'Brien.pdf" target="_blank" class="cta-link" download>resume</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hero" id="punny-hero">
+        <div class="container reveal">
+            <div class="left-column">
+                <img src="./images/punny.png" alt="Illustration image" class="hero-image">
+                <div class="code-markers-container">
+                    <div class="code-marker code-block-load-in">Python / Django</div>
+                    <div class="code-marker code-block-load-in">JavaScript</div>
+                    <div class="code-marker code-block-load-in">SQLite</div>
+                </div>
+                <div class="code-markers-container">
+                    <div class="code-marker code-block-load-in">CSS / Tailwind</div>
+                    <div class="code-marker code-block-load-in">HTML</div>
+                    <div class="code-marker code-block-load-in">Figma</div>
+                </div>
+            </div>
+
+            <div class="right-column">
+                <h1 class="hero-text">share and explain puns</h1>
+                
+                <div class="hero-cta">
+                    <a href="https://punnystuff.pythonanywhere.com/" target="_blank" class="cta-link">try it out</a>
+                    <p></p>
+                    <p id="punny-read-btn" class="cta-link" data-show="False" data-container="punny-read-text" data-toggle="read-show">read more</p>
+                    <div id='punny-read-text' class="read-more-container">
+                        <p class="cta-text">
+                            This is a server based web application that allows users to create, search, share and vote on puns! 
+                            <br>
+                            <br>Utilising Tailwind for CSS, this site is fully mobile responsive for all screen sizes. This site also is deserved for accessibility and a dark theme.
+                            <br>
+                            <br>The site uses Python/Django for the backend framework with SQLite as the database.
+                            <br>
+                            <br>Utilising the JavaScript fetch API, users can vote in real time for puns (like / dislike buttons).
+                            <br>
+                            <br>All UX/UI was designed in Figma for prototyping, then developed with no server for testing, then refactored for a server.
+                            <br>
+                            <br>Please add a pun! Then share it with your friends!
+                            <br>
+                        </p>
+                        <br>
+                        <a class="cta-link" href="https://github.com/ohohohobrien/punny" target="_blank">GitHub repository (frontend only)</a>
+                        <br>
+                        <a class="cta-link" href="https://github.com/ohohohobrien/punnyDjango" target="_blank">GitHub repository (backend)</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -410,6 +459,7 @@
                 nav = document.querySelector('nav')
                 mobileBtnExit = document.getElementById('mobile-exit');
                 topOfPageBtn = document.getElementById('top-of-page-btn');
+                punnyBtn = document.getElementById('punny-btn');
                 cbtBtn = document.getElementById('CBT-btn');
                 walkBtn = document.getElementById('walk-btn');
                 diceBtn = document.getElementById('dice-btn');
@@ -428,6 +478,10 @@
             })
 
             topOfPageBtn.addEventListener('click', () => {
+                nav.classList.remove('menu-btn');
+            })
+
+            punnyBtn.addEventListener('click', () => {
                 nav.classList.remove('menu-btn');
             })
 
